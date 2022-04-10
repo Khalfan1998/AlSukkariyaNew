@@ -13,7 +13,7 @@ const HomeScreen = ({ match }) => {
     <div>
       <Header />
       <ShopSection keyword={keyword} pagenumber={pagenumber} />
-      <CalltoActionSection />
+      {/* <CalltoActionSection /> */}
       <ContactInfo />
       <Footer />
     </div>
