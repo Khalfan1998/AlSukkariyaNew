@@ -202,12 +202,12 @@ const OrderScreen = ({ match }) => {
                       </td>
                       <td>BHD {order.shippingPrice}</td>
                     </tr>
-                    <tr>
+                    {/* <tr>
                       <td>
                         <strong>Tax</strong>
                       </td>
                       <td>BHD {order.taxPrice}</td>
-                    </tr>
+                    </tr> */}
                     <tr>
                       <td>
                         <strong>Total</strong>

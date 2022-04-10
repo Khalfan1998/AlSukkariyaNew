@@ -22,13 +22,11 @@ const PlaceOrderScreen = ({ history }) => {
   cart.itemsPrice = addDecimals(
     cart.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0)
   );
-  cart.shippingPrice = addDecimals(cart.itemsPrice > 100 ? 0 : 100);
-  cart.taxPrice = addDecimals(Number((0.15 * cart.itemsPrice).toFixed(2)));
-  cart.totalPrice = (
-    Number(cart.itemsPrice) +
-    Number(cart.shippingPrice) +
-    Number(cart.taxPrice)
-  ).toFixed(2);
+  cart.shippingPrice = addDecimals(cart.itemsPrice > 5 ? 0 : 5);
+  // cart.taxPrice = addDecimals(Number((0.15 * cart.itemsPrice).toFixed(2)));
+  cart.totalPrice = (Number(cart.itemsPrice) + Number(cart.shippingPrice))
+    // Number(cart.taxPrice)
+    .toFixed(2);
 
   const orderCreate = useSelector((state) => state.orderCreate);
   const { order, success, error } = orderCreate;
@@ -48,7 +46,7 @@ const PlaceOrderScreen = ({ history }) => {
         paymentMethod: cart.paymentMethod,
         itemsPrice: cart.itemsPrice,
         shippingPrice: cart.shippingPrice,
-        taxPrice: cart.taxPrice,
+        // taxPrice: cart.taxPrice,
         totalPrice: cart.totalPrice,
       })
     );
@@ -159,12 +157,12 @@ const PlaceOrderScreen = ({ history }) => {
                   </td>
                   <td>BHD {cart.shippingPrice}</td>
                 </tr>
-                <tr>
+                {/* <tr>
                   <td>
                     <strong>Tax</strong>
                   </td>
                   <td>BHD {cart.taxPrice}</td>
-                </tr>
+                </tr> */}
                 <tr>
                   <td>
                     <strong>Total</strong>
