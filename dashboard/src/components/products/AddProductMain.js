@@ -49,8 +49,8 @@ const AddProductMain = () => {
       <section className="content-main" style={{ maxWidth: "1200px" }}>
         <form onSubmit={submitHandler}>
           <div className="content-header">
-            <Link to="/products" className="btn btn-danger text-white">
-              Go to products
+            <Link to="/products" className="btn btn-primary text-black">
+              Back to Products
             </Link>
             <h2 className="content-title">Add product</h2>
             <div>
@@ -129,7 +129,7 @@ const AddProductMain = () => {
                       required
                       onChange={(e) => setImage(e.target.value)}
                     />
-                    <input className="form-control mt-3" type="file" />
+                    {/* <input className="form-control mt-3" type="file" /> */}
                   </div>
                 </div>
               </div>

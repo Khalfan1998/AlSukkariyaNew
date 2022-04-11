@@ -48,12 +48,12 @@ const OrderDetailmain = (props) => {
               <div className="col-lg-6 col-md-6">
                 <span>
                   <i className="far fa-calendar-alt mx-2"></i>
-                  <b className="text-white">
+                  <b className="text-black">
                     {moment(order.createdAt).format("llll")}
                   </b>
                 </span>
                 <br />
-                <small className="text-white mx-3 ">
+                <small className="text-black mx-3 ">
                   Order ID: {order._id}
                 </small>
               </div>

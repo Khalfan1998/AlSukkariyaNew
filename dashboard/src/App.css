@@ -25,11 +25,12 @@ a.disabled {
   pointer-events: none;
 }
 .btn-primary {
-  background-color: #4fa607 !important;
-  border: 1px solid #4fa607 !important;
+  color: black !important;
+  background-color: #EAE8E6 !important;
+  border: 1px solid black !important;
 }
 .Header-green {
-  background-color: #4fa607;
+  background-color: #EAE8E6;
 }
 /* .screen-overlay {
   width: 0%;
@@ -107,8 +108,8 @@ a.disabled {
 }
 
 .img-xs {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
 }
 
 .img-sm {
@@ -191,7 +192,7 @@ body.offcanvas-active {
   display: inline-block;
 }
 .navbar-aside .aside-top .logo {
-  height: 46px;
+  height: 90px;
   width: auto;
   max-width: 200px;
 }
@@ -228,7 +229,7 @@ body.offcanvas-active {
   border: 2px solid #eee;
 }
 .nav-item img.rounded-circle:hover {
-  border-color: #4fa607;
+  border-color: #EAE8E6;
 }
 
 .content-header {
@@ -315,7 +316,7 @@ body.aside-mini .menu-aside .menu-item.has-submenu .menu-link:after {
   font-size: 18px;
 }
 .menu-aside .active .icon {
-  color: #4fa607;
+  color: black;
 }
 .menu-aside .active {
   background-color: #ebf0fd;
@@ -412,7 +413,7 @@ a[class*="card"] {
   color: initial;
 }
 a[class*="card"]:hover .title {
-  color: #4fa607;
+  color: #EAE8E6;
 }
 
 /* ITEM LIST */
@@ -450,7 +451,7 @@ a[class*="card"]:hover .title {
   margin-bottom: 5px;
 }
 .itemside a.title:hover {
-  color: #4fa607;
+  color: #EAE8E6;
 }
 
 a.itemside {
@@ -500,7 +501,7 @@ a.itemside:hover .title {
   text-decoration: none;
 }
 .card-product-grid a.title:hover {
-  color: #4fa607;
+  color: #EAE8E6;
 }
 .card-product-grid:hover {
   border-color: #adb5bd;
@@ -529,11 +530,12 @@ a.itemside:hover .title {
 .card-user .card-header {
   position: relative;
   height: 100px;
-  background-color: #c3f19d !important;
+  background-color: #EAE8E6 !important;
   text-align: center;
 }
 .card-user .img-avatar {
   position: absolute;
+  background-color: #EAE8E6 !important;
   transform: translate(-50%, -50%);
   top: 100%;
 }
@@ -626,7 +628,7 @@ ul.row-sm {
   width: 7px;
   border-radius: 100%;
   height: 7px;
-  background: #4fa607;
+  background: #EAE8E6;
 }
 
 .list-check {
@@ -642,7 +644,7 @@ ul.row-sm {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   font-size: 12px;
-  color: #00b517;
+  color: #EAE8E6;
   position: absolute;
   top: 2px;
   left: 0;
@@ -659,7 +661,7 @@ ul.row-sm {
 }
 .list-normal li:before {
   content: "•";
-  color: #4fa607;
+  color: #EAE8E6;
   display: inline-block;
   width: 1em;
   margin-left: -1em;
@@ -677,7 +679,7 @@ ul.row-sm {
   color: #141432;
 }
 .list-menu a:hover {
-  color: #4fa607;
+  color: #EAE8E6;
 }
 
 .cols-two {
@@ -828,7 +830,7 @@ ul.row-sm {
 
 .form-control:hover,
 .form-select:hover {
-  border-color: #4fa607;
+  border-color: #EAE8E6;
 }
 
 .btn-facebook {
