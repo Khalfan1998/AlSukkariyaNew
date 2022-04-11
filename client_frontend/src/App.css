@@ -120,10 +120,11 @@ color: black;
 .badge {
   background-color: red;
   position: absolute;
-  top: -20px;
+  top: -10px;
+  right: -5px;
   border-radius: 100px;
   padding: 5px 7px;
-  font-size: 12px;
+  font-size: 10px;
 }
 .name-button {
   padding: 5px 15px;
