@@ -1,38 +1,32 @@
+import { Instagram } from "@material-ui/icons";
 import React from "react";
 
 const Footer = () => {
   return (
-    <div className="footer">
-      <div className="justify-content-center d-flex">
-        <div className="card-name">
-          <img
-            alt="mastercard"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/1200px-MasterCard_Logo.svg.png"
-          />
+    <div className="containerFooter">
+      <div className="row">
+        <div className="col-md-6 d-flex align-items-center display-none">
+          <p>+973 39994080</p>
+          <a
+            className="whatsapp"
+            href="https://api.whatsapp.com/send?phone=97339994080"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+          >
+            Whatsapp Chat
+          </a>
         </div>
-        <div className="card-name">
-          <img
-            alt="visa"
-            src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png"
-          />
-        </div>
-        <div className="card-name">
-          <img
-            alt="paypal"
-            src="https://pbs.twimg.com/media/EfTZlEnWAAMn1lX.png"
-          />
-        </div>
-        <div className="card-name">
-          <img
-            alt="express"
-            src="https://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/American-Express-icon.png"
-          />
-        </div>
-        <div className="card-name">
-          <img
-            alt="discover"
-            src="https://icons-for-free.com/iconfiles/png/512/cash+checkout+discover+network+online+shopping+payment+method-1320191225548835050.png"
-          />
+        <div className=" col-12 col-lg-6 justify-content-center justify-content-lg-end d-flex align-items-center">
+          <a
+            className="instagram"
+            href="https://www.instagram.com/alsukkariya/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+          >
+            <Instagram />
+          </a>
         </div>
       </div>
     </div>

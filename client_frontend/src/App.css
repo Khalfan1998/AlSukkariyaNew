@@ -39,12 +39,35 @@ textarea:focus {
   margin: 0;
   padding: 0;
 }
+
+.containerFooter{
+background-color: #EAE8E6;
+}
+
+.whatsapp{
+color: black;
+}
+
+.instagram{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  background-color: rgb(228, 64, 95);
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin-right: 20px
+}
+
 .Announcement {
-  background-color: #1cb803;
+  background-color: #EAE8E6;
   padding: 10px 0px 6px 0px;
 }
 .Announcement .col-md-6 p {
-  color: white;
+  color: black;
   margin-right: 6rem;
   font-size: 15px;
 }
@@ -56,6 +79,7 @@ textarea:focus {
 /* Header */
 .header {
   padding: 10px 0px 10px 0px;
+  background-color: #EAE8E6;
 }
 .navbar-brand img {
   width: 60%;
