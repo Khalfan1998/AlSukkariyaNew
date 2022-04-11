@@ -1,12 +1,20 @@
-import { Instagram } from "@material-ui/icons";
 import React from "react";
+import { Instagram } from "@material-ui/icons";
 
 const Footer = () => {
   return (
-    <div className="containerFooter">
-      <div className="row">
-        <div className="col-md-6 d-flex align-items-center display-none">
+    <div className="footer">
+      <div className="justify-content-center d-flex">
+        <div className="card-name">
           <p>+973 39994080</p>
+        </div>
+        <div className="card-name">
+          {/* <img
+            alt="paypal"
+            src="https://pbs.twimg.com/media/EfTZlEnWAAMn1lX.png"
+          /> */}
+        </div>
+        <div className="card-name">
           <a
             className="whatsapp"
             href="https://api.whatsapp.com/send?phone=97339994080"
@@ -17,7 +25,13 @@ const Footer = () => {
             Whatsapp Chat
           </a>
         </div>
-        <div className=" col-12 col-lg-6 justify-content-center justify-content-lg-end d-flex align-items-center">
+        <div className="card-name">
+          {/* <img
+            alt="discover"
+            src="https://icons-for-free.com/iconfiles/png/512/cash+checkout+discover+network+online+shopping+payment+method-1320191225548835050.png"
+          /> */}
+        </div>
+        <div className="card-name">
           <a
             className="instagram"
             href="https://www.instagram.com/alsukkariya/"

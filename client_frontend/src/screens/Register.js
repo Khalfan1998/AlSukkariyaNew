@@ -37,7 +37,7 @@ const Register = ({ location, history }) => {
         {loading && <Loading />}
 
         <form
-          className="Login col-md-8 col-lg-4 col-11"
+          className="Login col-md-8 col-lg-4 col-11 bgColor"
           onSubmit={submitHandler}
         >
           <input

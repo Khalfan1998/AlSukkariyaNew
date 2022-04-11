@@ -32,6 +32,7 @@ const Header = () => {
   return (
     <header className="main-header navbar">
       <div className="col-search">
+        <h2>Admin</h2>
         {/* <form className="searchform">
           <div className="input-group">
             <input

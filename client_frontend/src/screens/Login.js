@@ -35,7 +35,7 @@ const Login = ({ location, history }) => {
         {error && <Message variant="alert-danger">{error}</Message>}
         {loading && <Loading />}
         <form
-          className="Login col-md-8 col-lg-4 col-11"
+          className="Login col-md-8 col-lg-4 col-11 bgColor"
           onSubmit={submitHandler}
         >
           <input

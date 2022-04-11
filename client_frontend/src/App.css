@@ -45,7 +45,19 @@ background-color: #EAE8E6;
 }
 
 .whatsapp{
+  padding: 5px;
+  border-radius: 8px;
+  border: 1px solid black;
+  background-color:#ECDCCD;
 color: black;
+}
+
+.bgColor{
+  background-color:#DFD3C5 !important;
+}
+
+.navLogo{
+  margin-left: 8rem;
 }
 
 .instagram{
@@ -181,7 +193,6 @@ color: black;
 }
 .border-product {
   padding: 15px;
-  border: 1px solid #f3f3f3;
   border-radius: 5px;
 }
 .shopBack {
@@ -189,7 +200,7 @@ color: black;
   position: relative;
   overflow: hidden;
   width: 100%;
-  background-color: #f3fbf7;
+  background-color: #fffafa;
 }
 .shopBack img {
   width: 100%;
@@ -308,7 +319,6 @@ color: black;
   margin-bottom: 50px;
 }
 .single-image {
-  background-color: #f3fbf7;
   margin-right: 20px;
   height: 700px;
   display: flex;
@@ -325,6 +335,9 @@ color: black;
   font-weight: 600;
   line-height: 22px;
   margin-bottom: 30px;
+}
+.shopcontainer.row {
+  justify-content: center;
 }
 
 .display-flex {
@@ -408,7 +421,7 @@ color: black;
   margin-top: 20px;
   padding: 20px 0;
   border: 0;
-  background-color: #1cb803;
+  background-color: #008080;
   border-radius: 5px;
   text-transform: uppercase;
   color: white;
@@ -597,8 +610,10 @@ color: black;
   background-color: #ececec;
 }
 .card-name {
-  width: 4%;
-  margin: 10px;
+  font-size: 20px;
+  margin-right: -4rem !important;
+  width: 20%;
+  margin: 20px;
 }
 .card-name img {
   width: 100%;
