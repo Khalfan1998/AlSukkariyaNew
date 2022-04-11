@@ -44,13 +44,6 @@ textarea:focus {
 background-color: #EAE8E6;
 }
 
-.whatsapp{
-  padding: 5px;
-  border-radius: 8px;
-  border: 1px solid black;
-  background-color:#ECDCCD;
-color: black;
-}
 
 .bgColor{
   background-color:#DFD3C5 !important;
@@ -58,6 +51,20 @@ color: black;
 
 .navLogo{
   margin-left: 8rem;
+}
+
+.whatsapp{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  background-color: #2DD449;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin-right: 20px
 }
 
 .instagram{
@@ -73,7 +80,6 @@ color: black;
   justify-content: center;
   margin-right: 20px
 }
-
 .Announcement {
   background-color: #EAE8E6;
   padding: 10px 0px 6px 0px;

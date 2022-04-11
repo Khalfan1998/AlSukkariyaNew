@@ -1,5 +1,5 @@
 import React from "react";
-import { Instagram } from "@material-ui/icons";
+import { Instagram, WhatsApp } from "@material-ui/icons";
 
 const Footer = () => {
   return (
@@ -22,7 +22,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             style={{ textDecoration: "none" }}
           >
-            Whatsapp Chat
+            <WhatsApp />
           </a>
         </div>
         <div className="card-name">

@@ -95,7 +95,7 @@ const Header = () => {
                   </Link>
                 </div>
                 <div className="col-12 d-flex align-items-center">
-                  <form onSubmit={submitHandler} className="input-group">
+                  {/* <form onSubmit={submitHandler} className="input-group">
                     <input
                       type="search"
                       className="form-control rounded search"
@@ -105,7 +105,7 @@ const Header = () => {
                     <button type="submit" className="search-button">
                       search
                     </button>
-                  </form>
+                  </form> */}
                 </div>
               </div>
             </div>
@@ -115,7 +115,7 @@ const Header = () => {
           <div className="pc-header">
             <div className="row">
               <div className="col-md-4 col-8 d-flex align-items-center">
-                <form onSubmit={submitHandler} className="input-group">
+                {/* <form onSubmit={submitHandler} className="input-group">
                   <input
                     type="search"
                     className="form-control rounded search"
@@ -125,7 +125,7 @@ const Header = () => {
                   <button type="submit" className="search-button">
                     search
                   </button>
-                </form>
+                </form> */}
               </div>
               <div className="col-md-2 col-4 d-flex align-items-center">
                 <Link className="navbar-brand" to="/">
