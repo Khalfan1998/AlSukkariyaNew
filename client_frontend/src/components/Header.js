@@ -114,7 +114,10 @@ const Header = () => {
           {/* PC HEADER */}
           <div className="pc-header">
             <div className="row">
-              <div className="col-md-4 col-8 d-flex align-items-center">
+              <div className="col-md-4 col-8 d-flex align-items-center Login-Register">
+                <Link to="/">Home</Link>
+                <Link to="/">About Us</Link>
+                <Link to="/">Contact</Link>
                 {/* <form onSubmit={submitHandler} className="input-group">
                   <input
                     type="search"
