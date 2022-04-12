@@ -48,7 +48,7 @@ const PaymentScreen = ({ history }) => {
                 className="buttonCash"
                 type="submit"
                 value={cashMethod}
-                onChange={(e) => setPaymentMethod(e.target.value)}
+                onChange={(e) => setCashMethod(e.target.value)}
               />
             </div>
           </div>
@@ -63,7 +63,7 @@ const PaymentScreen = ({ history }) => {
                 className="buttonBenefit"
                 type="submit"
                 value={benefitMethod}
-                onChange={(e) => setPaymentMethod(e.target.value)}
+                onChange={(e) => setBenefitMethod(e.target.value)}
               />
             </div>
           </div>

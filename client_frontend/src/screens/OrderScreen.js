@@ -104,19 +104,17 @@ const OrderScreen = ({ match }) => {
                     </h5>
                     <p>Shipping: {order.shippingAddress.country}</p>
                     <p>Pay method: {order.paymentMethod}</p>
-                    {order.isPaid ? (
-                      <div className="bg-info p-2 col-12">
-                        <p className="text-white text-center text-sm-start">
-                          Paid on {moment(order.paidAt).calendar()}
-                        </p>
-                      </div>
-                    ) : (
-                      <div className="bg-danger p-2 col-12">
-                        <p className="text-white text-center text-sm-start">
-                          Not Paid
-                        </p>
-                      </div>
-                    )}
+                    <br />
+                    <p>
+                      If using BenefitPay, Please Send BHD {order.totalPrice} to
+                      IBAN : 312312311{" "}
+                    </p>
+
+                    <div className="bg-info p-2 col-12">
+                      <p className="text-white text-center text-sm-start">
+                        Confirmed at {moment(order.paidAt).calendar()}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
