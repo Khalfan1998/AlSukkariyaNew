@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removefromcart } from "../Redux/Actions/cartActions";
+import Footer from "../components/Footer";
 
 const CartScreen = ({ match, location, history }) => {
   window.scrollTo(0, 0);
@@ -32,7 +33,7 @@ const CartScreen = ({ match, location, history }) => {
     <>
       <Header />
       {/* Cart */}
-      <div className="container">
+      <div className="container cartFooter">
         {cartItems.length === 0 ? (
           <div className=" alert alert-info text-center mt-3">
             Your cart is empty
@@ -112,6 +113,7 @@ const CartScreen = ({ match, location, history }) => {
           </>
         )}
       </div>
+      <Footer />
     </>
   );
 };

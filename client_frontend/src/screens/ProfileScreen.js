@@ -6,6 +6,7 @@ import { getUserDetails } from "../Redux/Actions/userActions";
 import Orders from "../components/profileComponents/Orders";
 import moment from "moment";
 import { listMyOrders } from "../Redux/Actions/OrderActions";
+import Footer from "../components/Footer";
 
 const ProfileScreen = () => {
   window.scrollTo(0, 0);
@@ -25,7 +26,7 @@ const ProfileScreen = () => {
   return (
     <>
       <Header />
-      <div className="container mt-lg-5 mt-3">
+      <div className="container mt-lg-5 mt-3 profilePage">
         <div className="row align-items-start">
           <div className="col-lg-4 p-0 shadow ">
             <div className="author-card pb-0 pb-md-3">
@@ -106,6 +107,7 @@ const ProfileScreen = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

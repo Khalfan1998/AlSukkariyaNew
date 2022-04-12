@@ -7,6 +7,8 @@ body {
   font-size: 17px;
   padding: 0;
   box-sizing: border-box;
+  height: 100%;
+  min-height: 100%;
 }
 a {
   text-decoration: none;
@@ -477,6 +479,30 @@ background-color: #EAE8E6;
   color: #7a7a7a;
 }
 /* PROFILE */
+.profilePage{
+  margin-bottom: 5rem;
+}
+
+.loginFooter{
+  margin-bottom: 5rem;
+}
+
+.paymentFooter{
+  margin-bottom: 6rem;
+}
+
+.placeOrderFooter{
+  margin-bottom: 11rem;
+}
+
+.orderScreenFooter{
+  margin-bottom: 7rem;
+}
+
+.cartFooter{
+  margin-bottom: 27rem;
+}
+
 .author-card {
   position: relative;
 }
@@ -647,6 +673,9 @@ background-color: #EAE8E6;
 }
 /* FOOTER */
 .footer {
+  position: relative;
+  height: 80px;
+  margin-top: 0px;
   background-color: #ececec;
 }
 .card-name {

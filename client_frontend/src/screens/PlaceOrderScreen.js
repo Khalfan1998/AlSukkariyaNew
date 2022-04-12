@@ -5,6 +5,7 @@ import { createOrder } from "../Redux/Actions/OrderActions";
 import { ORDER_CREATE_RESET } from "../Redux/Constants/OrderConstants";
 import Header from "../components/Header";
 import Message from "../components/LoadingError/Error";
+import Footer from "../components/Footer";
 
 const PlaceOrderScreen = ({ history }) => {
   window.scrollTo(0, 0);
@@ -55,7 +56,7 @@ const PlaceOrderScreen = ({ history }) => {
   return (
     <>
       <Header />
-      <div className="container">
+      <div className="container placeOrderFooter">
         <div className="row  order-detail">
           <div className="col-lg-4 col-sm-4 mb-lg-4 mb-5 mb-sm-0">
             <div className="row ">
@@ -173,7 +174,7 @@ const PlaceOrderScreen = ({ history }) => {
             </table>
             {cart.cartItems.length === 0 ? null : (
               <button type="submit" onClick={placeOrderHandler}>
-                PROCEED TO PAYMENT
+                PROCEED
               </button>
             )}
             {error && (
@@ -184,6 +185,7 @@ const PlaceOrderScreen = ({ history }) => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

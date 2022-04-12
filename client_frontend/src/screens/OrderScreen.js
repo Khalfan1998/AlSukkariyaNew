@@ -9,6 +9,7 @@ import Message from "../components/LoadingError/Error";
 import moment from "moment";
 import axios from "axios";
 import { ORDER_PAY_RESET } from "../Redux/Constants/OrderConstants";
+import Footer from "../components/Footer";
 
 const OrderScreen = ({ match }) => {
   window.scrollTo(0, 0);
@@ -48,7 +49,6 @@ const OrderScreen = ({ match }) => {
       dispatch(getOrderDetails(orderId));
     } else if (!order.isPaid) {
       if (!window.paypal) {
-        addPayPalScript();
       } else {
         setSdkReady(true);
       }
@@ -62,7 +62,7 @@ const OrderScreen = ({ match }) => {
   return (
     <>
       <Header />
-      <div className="container">
+      <div className="container orderScreenFooter">
         {loading ? (
           <Loading />
         ) : error ? (
@@ -87,6 +87,13 @@ const OrderScreen = ({ match }) => {
                         {order.user.email}
                       </a>
                     </p>
+                    <p>
+                      Order ID:
+                      <br />
+                      <a href={`/order/${order._id}`} className="link">
+                        {order._id}
+                      </a>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -106,8 +113,10 @@ const OrderScreen = ({ match }) => {
                     <p>Pay method: {order.paymentMethod}</p>
                     <br />
                     <p>
-                      If using BenefitPay, Please Send BHD {order.totalPrice} to
-                      IBAN : 312312311{" "}
+                      <strong>
+                        If using BenefitPay, Please Send BHD {order.totalPrice}{" "}
+                        to IBAN : 312312311{" "}
+                      </strong>
                     </p>
 
                     <div className="bg-info p-2 col-12">
@@ -216,7 +225,7 @@ const OrderScreen = ({ match }) => {
                 </table>
                 {!order.isPaid && (
                   <div className="col-12">
-                    {loadingPay && <Loading />}
+                    {/* {loadingPay && <Loading />}
                     {!sdkReady ? (
                       <Loading />
                     ) : (
@@ -224,7 +233,7 @@ const OrderScreen = ({ match }) => {
                         amount={order.totalPrice}
                         onSuccess={successPaymentHandler}
                       />
-                    )}
+                    )} */}
                   </div>
                 )}
               </div>
@@ -232,6 +241,7 @@ const OrderScreen = ({ match }) => {
           </>
         )}
       </div>
+      <Footer />
     </>
   );
 };

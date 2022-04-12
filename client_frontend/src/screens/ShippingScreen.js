@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Header from "../components/Header";
 import { saveShippingAddress } from "../Redux/Actions/cartActions";
+import Footer from "../components/Footer";
 
 const ShippingScreen = ({ history }) => {
   window.scrollTo(0, 0);
@@ -61,6 +62,7 @@ const ShippingScreen = ({ history }) => {
           <button type="submit">Continue</button>
         </form>
       </div>
+      <Footer />
     </>
   );
 };

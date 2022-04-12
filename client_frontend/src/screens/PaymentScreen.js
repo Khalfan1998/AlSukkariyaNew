@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { savePaymentMethod } from "../Redux/Actions/cartActions";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const PaymentScreen = ({ history }) => {
   window.scrollTo(0, 0);
@@ -39,7 +40,7 @@ const PaymentScreen = ({ history }) => {
   return (
     <>
       <Header />
-      <div className="container d-flex justify-content-center align-items-center login-center">
+      <div className="container d-flex justify-content-center align-items-center login-center paymentFooter">
         <h4>SELECT PAYMENT METHOD</h4>
         <form className="Login2 col-md-8 col-lg-4 col-11" onSubmit={submitCash}>
           <div className="payment-container">
@@ -68,7 +69,7 @@ const PaymentScreen = ({ history }) => {
             </div>
           </div>
         </form>
-        <form
+        {/* <form
           className="Login2 col-md-8 col-lg-4 col-11"
           onSubmit={submitHandler}
         >
@@ -82,8 +83,9 @@ const PaymentScreen = ({ history }) => {
               />
             </div>
           </div>
-        </form>
+        </form> */}
       </div>
+      <Footer />
     </>
   );
 };
