@@ -1,12 +1,16 @@
 import React from "react";
-import { Instagram, WhatsApp } from "@material-ui/icons";
+import { Instagram, WhatsApp, PhoneIphone } from "@material-ui/icons";
 
 const Footer = () => {
   return (
     <div className="footer">
       <div className="justify-content-center d-flex">
         <div className="card-name">
-          <p>+973 39994080</p>
+          <p>
+            {" "}
+            <PhoneIphone />
+            +973 39994080
+          </p>
         </div>
         <div className="card-name">
           {/* <img

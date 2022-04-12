@@ -14,6 +14,8 @@ const PaymentScreen = ({ history }) => {
   }
 
   const [paymentMethod, setPaymentMethod] = useState("PayPal");
+  const [cashMethod, setCashMethod] = useState("Cash on Delivery");
+  const [benefitMethod, setBenefitMethod] = useState("BenefitPay");
 
   const dispatch = useDispatch();
 
@@ -22,28 +24,64 @@ const PaymentScreen = ({ history }) => {
     dispatch(savePaymentMethod(paymentMethod));
     history.push("/placeorder");
   };
+
+  const submitCash = (e) => {
+    e.preventDefault();
+    dispatch(savePaymentMethod(cashMethod));
+    history.push("/placeorder");
+  };
+
+  const submitBenefit = (e) => {
+    e.preventDefault();
+    dispatch(savePaymentMethod(benefitMethod));
+    history.push("/placeorder");
+  };
   return (
     <>
       <Header />
       <div className="container d-flex justify-content-center align-items-center login-center">
+        <h4>SELECT PAYMENT METHOD</h4>
+        <form className="Login2 col-md-8 col-lg-4 col-11" onSubmit={submitCash}>
+          <div className="payment-container">
+            <div className="radio-container">
+              <input
+                className="buttonCash"
+                type="submit"
+                value={cashMethod}
+                onChange={(e) => setPaymentMethod(e.target.value)}
+              />
+            </div>
+          </div>
+        </form>
+        <form
+          className="Login2 col-md-8 col-lg-4 col-11"
+          onSubmit={submitBenefit}
+        >
+          <div className="payment-container">
+            <div className="radio-container">
+              <input
+                className="buttonBenefit"
+                type="submit"
+                value={benefitMethod}
+                onChange={(e) => setPaymentMethod(e.target.value)}
+              />
+            </div>
+          </div>
+        </form>
         <form
           className="Login2 col-md-8 col-lg-4 col-11"
           onSubmit={submitHandler}
         >
-          <h6>SELECT PAYMENT METHOD</h6>
           <div className="payment-container">
             <div className="radio-container">
               <input
-                className="form-check-input"
-                type="radio"
+                className="buttonPayPal"
+                type="submit"
                 value={paymentMethod}
                 onChange={(e) => setPaymentMethod(e.target.value)}
               />
-              <label className="form-check-label">PayPal or Credit Card</label>
             </div>
           </div>
-
-          <button type="submit">Continue</button>
         </form>
       </div>
     </>

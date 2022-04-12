@@ -398,6 +398,38 @@ background-color: #EAE8E6;
   background: #ECDCCD;
 }
 
+.container.d-flex.justify-content-center.align-items-center.login-center {
+  flex-direction: column;
+}
+
+.buttonCash{
+  width: 100%;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #ECDCCD;
+  color: black;
+  font-weight: 600;
+}
+
+.buttonBenefit{
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #ECDCCD;
+  color: black;
+  font-weight: 600;
+}
+
+.buttonPayPal{
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #ECDCCD;
+  color: black;
+  font-weight: 600;
+}
+
 /* LOGIN */
 .login-center {
   padding: 50px 0;
