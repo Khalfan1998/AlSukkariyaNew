@@ -154,8 +154,8 @@ background-color: #EAE8E6;
   margin: 0 !important;
 }
 .dropdown-menu a:hover {
-  background-color: #1cb803 !important;
-  color: #ffffff !important;
+  background-color: #ECDCCD !important;
+  color: black !important;
 }
 .mobile-header {
   display: none;
@@ -574,8 +574,8 @@ background-color: #EAE8E6;
   margin-top: 20px;
   text-transform: uppercase;
   font-size: 13px;
-  background-color: #1cb803;
-  color: #ffffff;
+  background-color: #ECDCCD;
+  color: black;
 }
 /* orders */
 .link {
