@@ -47,7 +47,7 @@ const ShippingScreen = ({ history }) => {
           />
           <input
             type="text"
-            placeholder="Enter postal code"
+            placeholder="Enter phone number"
             value={postalCode}
             required
             onChange={(e) => setPostalCode(e.target.value)}
