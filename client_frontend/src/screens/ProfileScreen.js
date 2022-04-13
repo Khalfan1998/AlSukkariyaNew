@@ -7,6 +7,7 @@ import Orders from "../components/profileComponents/Orders";
 import moment from "moment";
 import { listMyOrders } from "../Redux/Actions/OrderActions";
 import Footer from "../components/Footer";
+import FooterNew from "../components/FooterNew";
 
 const ProfileScreen = () => {
   window.scrollTo(0, 0);
@@ -107,7 +108,7 @@ const ProfileScreen = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      <FooterNew />
     </>
   );
 };

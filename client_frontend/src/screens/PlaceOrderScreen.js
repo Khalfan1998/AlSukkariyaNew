@@ -6,6 +6,7 @@ import { ORDER_CREATE_RESET } from "../Redux/Constants/OrderConstants";
 import Header from "../components/Header";
 import Message from "../components/LoadingError/Error";
 import Footer from "../components/Footer";
+import FooterNew from "../components/FooterNew";
 
 const PlaceOrderScreen = ({ history }) => {
   window.scrollTo(0, 0);
@@ -185,7 +186,7 @@ const PlaceOrderScreen = ({ history }) => {
           </div>
         </div>
       </div>
-      <Footer />
+      <FooterNew />
     </>
   );
 };

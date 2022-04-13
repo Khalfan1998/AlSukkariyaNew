@@ -6,6 +6,7 @@ import Loading from "../components/LoadingError/Loading";
 import Header from "../components/Header";
 import { login } from "../Redux/Actions/userActions";
 import Footer from "../components/Footer";
+import FooterNew from "../components/FooterNew";
 
 const Login = ({ location, history }) => {
   window.scrollTo(0, 0);
@@ -61,7 +62,7 @@ const Login = ({ location, history }) => {
           </p>
         </form>
       </div>
-      <Footer />
+      <FooterNew />
     </>
   );
 };

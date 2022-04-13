@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removefromcart } from "../Redux/Actions/cartActions";
 import Footer from "../components/Footer";
+import FooterNew from "../components/FooterNew";
 
 const CartScreen = ({ match, location, history }) => {
   window.scrollTo(0, 0);
@@ -113,7 +114,7 @@ const CartScreen = ({ match, location, history }) => {
           </>
         )}
       </div>
-      <Footer />
+      <FooterNew />
     </>
   );
 };
