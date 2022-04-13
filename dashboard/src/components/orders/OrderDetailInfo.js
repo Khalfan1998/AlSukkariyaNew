@@ -26,7 +26,8 @@ const OrderDetailInfo = (props) => {
           <div className="text">
             <h6 className="mb-1">Order info</h6>
             <p className="mb-1">
-              Shipping: {order.shippingAddress.country} <br /> Pay method:{" "}
+              <strong>Shipping:</strong> {order.shippingAddress.country} <br />{" "}
+              <strong>Pay method: </strong>
               {order.paymentMethod}
             </p>
           </div>
@@ -40,10 +41,11 @@ const OrderDetailInfo = (props) => {
           <div className="text">
             <h6 className="mb-1">Deliver to</h6>
             <p className="mb-1">
-              Address: {order.shippingAddress.city}
+              <strong>Address:</strong> {order.shippingAddress.city}
               <br />
               {order.shippingAddress.address}
-              <br /> {order.shippingAddress.postalCode}
+              <br /> <strong>Phone Number:</strong>{" "}
+              {order.shippingAddress.postalCode}
             </p>
           </div>
         </article>
