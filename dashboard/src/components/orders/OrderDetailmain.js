@@ -33,13 +33,13 @@ const OrderDetailmain = (props) => {
     dispatch(deliverOrder(order));
   };
 
-  // useEffect(() => {
-  //   dispatch(getOrderDetails(orderId));
-  // }, [dispatch, orderId, successPaid]);
+  // // useEffect(() => {
+  // //   dispatch(getOrderDetails(orderId));
+  // // }, [dispatch, orderId, successPaid]);
 
-  const paidHandler = () => {
-    dispatch(paidOrder(order));
-  };
+  // const paidHandler = () => {
+  //   dispatch(paidOrder(order));
+  // };
 
   return (
     <section className="content-main">
@@ -101,22 +101,23 @@ const OrderDetailmain = (props) => {
                 <div className="box shadow-sm bg-light">
                   {order.isDelivered ? (
                     <button className="btn btn-success col-12">
-                      DELIVERED AT ({" "}
-                      {moment(order.isDeliveredAt).format("MMM Do YY")})
+                      DELIVERED & PAID AT ({" "}
+                      {moment(order.isDeliveredAt).format("MMM Do YY hh:mm:ss")}
+                      )
                     </button>
                   ) : (
                     <>
                       {loadingDelivered && <Loading />}
                       <button
                         onClick={deliverHandler}
-                        className="btn btn-dark col-12"
+                        className="btn btnPaid col-12"
                       >
-                        MARK AS DELIVERED
+                        MARK AS DELIVERED & PAID
                       </button>
                     </>
                   )}
                 </div>
-                <div className="box shadow-sm bg-light">
+                {/* <div className="box shadow-sm bg-light">
                   {order.isDelivered ? (
                     <button className="btn btn-success col-12">
                       PAID AT ({" "}
@@ -133,7 +134,7 @@ const OrderDetailmain = (props) => {
                       </button>
                     </>
                   )}
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

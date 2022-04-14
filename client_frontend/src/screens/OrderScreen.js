@@ -51,6 +51,7 @@ const OrderScreen = ({ match }) => {
       dispatch(getOrderDetails(orderId));
     } else if (!order.isPaid) {
       if (!window.paypal) {
+        addPayPalScript();
       } else {
         setSdkReady(true);
       }
@@ -225,9 +226,9 @@ const OrderScreen = ({ match }) => {
                     </tr>
                   </tbody>
                 </table>
-                {!order.isPaid && (
+                {/* {!order.isPaid && (
                   <div className="col-12">
-                    {/* {loadingPay && <Loading />}
+                    {loadingPay && <Loading />}
                     {!sdkReady ? (
                       <Loading />
                     ) : (
@@ -235,9 +236,9 @@ const OrderScreen = ({ match }) => {
                         amount={order.totalPrice}
                         onSuccess={successPaymentHandler}
                       />
-                    )} */}
+                    )}
                   </div>
-                )}
+                )} */}
               </div>
             </div>
           </>

@@ -11,7 +11,7 @@ const Orders = (props) => {
           <th scope="col">Name</th>
           <th scope="col">Email</th>
           <th scope="col">Total</th>
-          <th scope="col"></th>
+          <th scope="col">Paid</th>
           <th scope="col">Date</th>
           <th>Status</th>
           <th scope="col" className="text-end">
@@ -28,7 +28,7 @@ const Orders = (props) => {
             <td>{order.user.email}</td>
             <td>BHD {order.totalPrice}</td>
             <td>
-              {/* {order.isPaid ? (
+              {order.isDelivered ? (
                 <span className="badge rounded-pill alert-success">
                   Paid At {moment(order.paidAt).format("MMM Do YY")}
                 </span>
@@ -36,7 +36,7 @@ const Orders = (props) => {
                 <span className="badge rounded-pill alert-danger">
                   Not Paid
                 </span>
-              )} */}
+              )}
             </td>
             <td>{moment(order.createdAt).format("MMM Do YY")}</td>
             <td>

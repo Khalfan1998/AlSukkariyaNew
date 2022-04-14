@@ -739,7 +739,8 @@ ul.row-sm {
 }
 
 .btnPaid{
-  background-color:#00ff33b4;
+  background-color:#ECDCCD;
+  font-weight: 600;
 }
 
 .map-pin {
