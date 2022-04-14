@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
   deliverOrder,
+  paidOrder,
   getOrderDetails,
 } from "../../Redux/Actions/OrderActions";
 import Loading from "../LoadingError/Loading";
@@ -21,12 +22,23 @@ const OrderDetailmain = (props) => {
   const orderDeliver = useSelector((state) => state.orderDeliver);
   const { loading: loadingDelivered, success: successDelivered } = orderDeliver;
 
+  // const orderPaid = useSelector((state) => state.orderPaid);
+  // const { loading: loadingPaid, success: successPaid } = orderPaid;
+
   useEffect(() => {
     dispatch(getOrderDetails(orderId));
   }, [dispatch, orderId, successDelivered]);
 
   const deliverHandler = () => {
     dispatch(deliverOrder(order));
+  };
+
+  // useEffect(() => {
+  //   dispatch(getOrderDetails(orderId));
+  // }, [dispatch, orderId, successPaid]);
+
+  const paidHandler = () => {
+    dispatch(paidOrder(order));
   };
 
   return (
@@ -100,6 +112,24 @@ const OrderDetailmain = (props) => {
                         className="btn btn-dark col-12"
                       >
                         MARK AS DELIVERED
+                      </button>
+                    </>
+                  )}
+                </div>
+                <div className="box shadow-sm bg-light">
+                  {order.isDelivered ? (
+                    <button className="btn btn-success col-12">
+                      PAID AT ({" "}
+                      {moment(order.isPaidAt).format("MMM Do YY hh:mm:ss")})
+                    </button>
+                  ) : (
+                    <>
+                      {loadingDelivered && <Loading />}
+                      <button
+                        onClick={deliverHandler}
+                        className="btn col-12 btnPaid"
+                      >
+                        MARK AS PAID
                       </button>
                     </>
                   )}

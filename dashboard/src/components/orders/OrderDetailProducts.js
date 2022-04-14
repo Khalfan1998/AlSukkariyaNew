@@ -65,7 +65,7 @@ const OrderDetailProducts = (props) => {
                 </dd>
               </dl>
               <dl className="dlist">
-                <dt className="text-muted">Status:</dt>
+                {/* <dt className="text-muted">Status:</dt>
                 <dd>
                   {order.isPaid ? (
                     <span className="badge rounded-pill alert alert-success text-success">
@@ -76,7 +76,7 @@ const OrderDetailProducts = (props) => {
                       Not Paid
                     </span>
                   )}
-                </dd>
+                </dd> */}
               </dl>
             </article>
           </td>

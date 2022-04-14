@@ -738,6 +738,10 @@ ul.row-sm {
   background-color: #f30000;
 }
 
+.btnPaid{
+  background-color:#00ff33b4;
+}
+
 .map-pin {
   border-radius: 3rem;
   background-color: red;

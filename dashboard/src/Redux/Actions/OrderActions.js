@@ -8,6 +8,10 @@ import {
   ORDER_LIST_FAIL,
   ORDER_LIST_REQUEST,
   ORDER_LIST_SUCCESS,
+  ORDER_PAID_FAIL,
+  ORDER_PAID_RESET,
+  ORDER_PAID_SUCCESS,
+  ORDER_PAID_REQUEST,
 } from "../Constants/OrderConstants";
 import { logout } from "./userActions";
 import axios from "axios";
@@ -27,7 +31,7 @@ export const listOrders = () => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.get(`${URL}/api/orders/all`, config);
+    const { data } = await axios.get(`/api/orders/all`, config);
 
     dispatch({ type: ORDER_LIST_SUCCESS, payload: data });
   } catch (error) {
@@ -60,7 +64,7 @@ export const getOrderDetails = (id) => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.get(`${URL}/api/orders/${id}`, config);
+    const { data } = await axios.get(`/api/orders/${id}`, config);
     dispatch({ type: ORDER_DETAILS_SUCCESS, payload: data });
   } catch (error) {
     const message =
@@ -93,7 +97,7 @@ export const deliverOrder = (order) => async (dispatch, getState) => {
     };
 
     const { data } = await axios.put(
-      `${URL}/api/orders/${order._id}/delivered`,
+      `/api/orders/${order._id}/delivered`,
       {},
       config
     );
@@ -108,6 +112,42 @@ export const deliverOrder = (order) => async (dispatch, getState) => {
     }
     dispatch({
       type: ORDER_DELIVERED_FAIL,
+      payload: message,
+    });
+  }
+};
+
+// ORDER PAID
+export const paidOrder = (order) => async (dispatch, getState) => {
+  try {
+    dispatch({ type: ORDER_PAID_REQUEST });
+
+    const {
+      userLogin: { userInfo },
+    } = getState();
+
+    const config = {
+      headers: {
+        Authorization: `Bearer ${userInfo.token}`,
+      },
+    };
+
+    const { data } = await axios.put(
+      `/api/orders/${order._id}/paid`,
+      {},
+      config
+    );
+    dispatch({ type: ORDER_PAID_SUCCESS, payload: data });
+  } catch (error) {
+    const message =
+      error.response && error.response.data.message
+        ? error.response.data.message
+        : error.message;
+    if (message === "Not authorized, token failed") {
+      dispatch(logout());
+    }
+    dispatch({
+      type: ORDER_PAID_FAIL,
       payload: message,
     });
   }
