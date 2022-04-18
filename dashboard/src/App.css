@@ -25,9 +25,10 @@ a.disabled {
   pointer-events: none;
 }
 .btn-primary {
+  font-weight: 600;
   color: black !important;
-  background-color: #EAE8E6 !important;
-  border: 1px solid black !important;
+  background-color: #ECDCCD !important;
+  border: 0px solid black !important;
 }
 .Header-green {
   background-color: #EAE8E6;

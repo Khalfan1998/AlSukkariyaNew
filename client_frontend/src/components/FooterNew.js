@@ -8,6 +8,7 @@ import {
   Heading,
 } from "./FooterStyles";
 import { Instagram, WhatsApp, PhoneIphone } from "@material-ui/icons";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -15,7 +16,12 @@ const Footer = () => {
       <Container>
         <Row>
           <Column>
-            <Heading>
+            <Link className="logoFooter" to="/">
+              <img className="logoFooter" alt="logo" src="/images/logo.png" />
+            </Link>
+          </Column>
+          <Column>
+            <Heading className="phoneFooter">
               {" "}
               <PhoneIphone />
               +973 39994080

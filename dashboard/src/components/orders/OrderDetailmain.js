@@ -44,7 +44,7 @@ const OrderDetailmain = (props) => {
   return (
     <section className="content-main">
       <div className="content-header">
-        <Link to="/orders" className="btn btn-dark text-white">
+        <Link to="/orders" className="btn btn-primary text-white">
           Back To Orders
         </Link>
       </div>

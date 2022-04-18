@@ -55,6 +55,13 @@ background-color: #EAE8E6;
   margin-left: 8rem;
 }
 
+.phoneFooter{
+  margin-top: 2.4rem;
+
+}
+
+
+
 .whatsapp{
   width: 35px;
   height: 35px;
@@ -66,7 +73,8 @@ background-color: #EAE8E6;
   align-items: center;
   -webkit-box-pack: center;
   justify-content: center;
-  margin-right: 20px
+  margin-right: 20px;
+  margin-top: 2rem;
 }
 
 .instagram{
@@ -80,7 +88,8 @@ background-color: #EAE8E6;
   align-items: center;
   -webkit-box-pack: center;
   justify-content: center;
-  margin-right: 20px
+  margin-right: 20px;
+  margin-top: 2rem;
 }
 .Announcement {
   background-color: #EAE8E6;
@@ -103,6 +112,10 @@ background-color: #EAE8E6;
 }
 .navbar-brand img {
   width: 60%;
+}
+
+.logoFooter{
+  width: 68% !important;
 }
 .input-group {
   height: 50px;
