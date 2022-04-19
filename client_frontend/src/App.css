@@ -156,6 +156,7 @@ background-color: #EAE8E6;
 }
 
 .dropdown-menu {
+  min-width: 120px !important;
   background-color: black !important;
   border: 0 !important;
   padding: 0 !important;
