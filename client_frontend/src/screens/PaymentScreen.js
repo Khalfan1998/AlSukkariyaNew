@@ -4,6 +4,7 @@ import { savePaymentMethod } from "../Redux/Actions/cartActions";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FooterNew from "../components/FooterNew";
+import FooterNewest from "../components/FooterNewest";
 
 const PaymentScreen = ({ history }) => {
   window.scrollTo(0, 0);
@@ -86,7 +87,7 @@ const PaymentScreen = ({ history }) => {
           </div>
         </form> */}
       </div>
-      <FooterNew />
+      <FooterNewest />
     </>
   );
 };

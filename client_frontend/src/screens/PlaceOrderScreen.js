@@ -7,6 +7,7 @@ import Header from "../components/Header";
 import Message from "../components/LoadingError/Error";
 import Footer from "../components/Footer";
 import FooterNew from "../components/FooterNew";
+import FooterNewest from "../components/FooterNewest";
 
 const PlaceOrderScreen = ({ history }) => {
   window.scrollTo(0, 0);
@@ -186,7 +187,7 @@ const PlaceOrderScreen = ({ history }) => {
           </div>
         </div>
       </div>
-      <FooterNew />
+      <FooterNewest />
     </>
   );
 };

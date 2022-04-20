@@ -12,6 +12,7 @@ import { ORDER_PAY_RESET } from "../Redux/Constants/OrderConstants";
 import Footer from "../components/Footer";
 import FooterNew from "../components/FooterNew";
 import { URL } from "../Redux/Url";
+import FooterNewest from "../components/FooterNewest";
 
 const OrderScreen = ({ match }) => {
   window.scrollTo(0, 0);
@@ -244,7 +245,7 @@ const OrderScreen = ({ match }) => {
           </>
         )}
       </div>
-      <FooterNew />
+      <FooterNewest />
     </>
   );
 };

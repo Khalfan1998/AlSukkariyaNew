@@ -13,6 +13,7 @@ import { PRODUCT_CREATE_REVIEW_RESET } from "../Redux/Constants/ProductConstants
 import moment from "moment";
 import Footer from "../components/Footer";
 import FooterNew from "../components/FooterNew";
+import FooterNewest from "../components/FooterNewest";
 
 const SingleProduct = ({ history, match }) => {
   const [qty, setQty] = useState(1);
@@ -211,7 +212,7 @@ const SingleProduct = ({ history, match }) => {
           </>
         )}
       </div>
-      <FooterNew />
+      <FooterNewest />
     </>
   );
 };

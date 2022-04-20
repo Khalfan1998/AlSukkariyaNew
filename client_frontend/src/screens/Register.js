@@ -7,6 +7,7 @@ import { register } from "../Redux/Actions/userActions";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FooterNew from "../components/FooterNew";
+import FooterNewest from "../components/FooterNewest";
 
 const Register = ({ location, history }) => {
   window.scrollTo(0, 0);
@@ -69,7 +70,7 @@ const Register = ({ location, history }) => {
           </p>
         </form>
       </div>
-      <FooterNew />
+      <FooterNewest />
     </>
   );
 };

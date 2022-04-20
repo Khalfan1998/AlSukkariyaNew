@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import { saveShippingAddress } from "../Redux/Actions/cartActions";
 import Footer from "../components/Footer";
 import FooterNew from "../components/FooterNew";
+import FooterNewest from "../components/FooterNewest";
 
 const ShippingScreen = ({ history }) => {
   window.scrollTo(0, 0);
@@ -63,7 +64,7 @@ const ShippingScreen = ({ history }) => {
           <button type="submit">Continue</button>
         </form>
       </div>
-      <FooterNew />
+      <FooterNewest />
     </>
   );
 };
