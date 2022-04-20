@@ -6,6 +6,7 @@ import CalltoActionSection from "../components/homeComponents/CalltoActionSectio
 import Footer from "../components/Footer";
 import FooterNew from "../components/FooterNew";
 import Navbar from "../components/Navbar";
+import FooterNewest from "../components/FooterNewest";
 
 const HomeScreen = ({ match }) => {
   window.scrollTo(0, 0);
@@ -18,7 +19,7 @@ const HomeScreen = ({ match }) => {
       <ShopSection keyword={keyword} pagenumber={pagenumber} />
       {/* <CalltoActionSection /> */}
       {/* <ContactInfo /> */}
-      <FooterNew />
+      <FooterNewest />
     </div>
   );
 };

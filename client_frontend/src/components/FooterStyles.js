@@ -5,10 +5,6 @@ export const Box = styled.div`
   background-color: #ececec;
   position: absolute;
   width: 100%;
-
-  @media (max-width: 1000px) {
-    padding: 50px 10px;
-  }
 `;
 
 export const Container = styled.div`
@@ -31,12 +27,6 @@ export const Row = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 20px;
-
-  @media (max-width: 1000px) {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 0;
-    margin-left: 4rem;
-  }
 `;
 
 export const FooterLink = styled.a`
