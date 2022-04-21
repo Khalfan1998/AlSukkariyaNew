@@ -11,7 +11,7 @@ const FooterNewest = () => {
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <p style={{fontSize:"16px"}}><img className="logoFooter" alt="logo" src="/images/logo.png" /> +973 39994080</p>
+                        <p style={{fontSize:"16px"}}><img className="logoFooter" alt="logo" src="/images/logo.png" /></p>
                     </div>
                     <div class="col-md-6">
                         <div class="akasha-socials style-01">

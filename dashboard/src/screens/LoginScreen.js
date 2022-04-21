@@ -35,6 +35,7 @@ const Login = ({ history }) => {
         <div className="card-body">
           {error && <Message variant="alert-danger">{error}</Message>}
           {loading && <Loading />}
+          <img className="loginLogo" alt="logo" src="/images/logo.png" />
           <h4 className="card-title mb-4 text-center">Sign in</h4>
           <form onSubmit={submitHandler}>
             <div className="mb-3">

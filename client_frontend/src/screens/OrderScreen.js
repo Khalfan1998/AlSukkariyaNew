@@ -73,6 +73,82 @@ const OrderScreen = ({ match }) => {
           <Message variant="alert-danger">{error}</Message>
         ) : (
           <>
+            <div className="row order-products justify-content-between mBottom">
+              <div className="col-lg-8">
+                {order.orderItems.length === 0 ? (
+                  <Message variant="alert-info mt-5">
+                    Your order is empty
+                  </Message>
+                ) : (
+                  <>
+                    {order.orderItems.map((item, index) => (
+                      <div className="order-product row" key={index}>
+                        <div className="col-md-3 col-6">
+                          <img src={item.image} alt={item.name} />
+                        </div>
+                        <div className="col-md-5 col-6 d-flex align-items-center">
+                          <Link to={`/products/${item.product}`}>
+                            <h6>{item.name}</h6>
+                          </Link>
+                        </div>
+                        <div className="mt-3 mt-md-0 col-md-2 col-6  d-flex align-items-center flex-column justify-content-center ">
+                          <h4>QUANTITY</h4>
+                          <h6>{item.qty}</h6>
+                        </div>
+                        <div className="mt-3 mt-md-0 col-md-2 col-6 align-items-end  d-flex flex-column justify-content-center ">
+                          <h4>SUBTOTAL</h4>
+                          <h6>BHD {item.qty * item.price}</h6>
+                        </div>
+                      </div>
+                    ))}
+                  </>
+                )}
+              </div>
+              {/* total */}
+              <div className="col-lg-3 d-flex align-items-end flex-column mt-5 subtotal-order">
+                <table className="table table-bordered">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <strong>Products</strong>
+                      </td>
+                      <td>BHD {order.itemsPrice}</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <strong>Shipping</strong>
+                      </td>
+                      <td>BHD {order.shippingPrice}</td>
+                    </tr>
+                    {/* <tr>
+                      <td>
+                        <strong>Tax</strong>
+                      </td>
+                      <td>BHD {order.taxPrice}</td>
+                    </tr> */}
+                    <tr>
+                      <td>
+                        <strong>Total</strong>
+                      </td>
+                      <td>BHD {order.totalPrice}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                {/* {!order.isPaid && (
+                  <div className="col-12">
+                    {loadingPay && <Loading />}
+                    {!sdkReady ? (
+                      <Loading />
+                    ) : (
+                      <PayPalButton
+                        amount={order.totalPrice}
+                        onSuccess={successPaymentHandler}
+                      />
+                    )}
+                  </div>
+                )} */}
+              </div>
+            </div>
             <div className="row  order-detail">
               <div className="col-lg-4 col-sm-4 mb-lg-4 mb-5 mb-sm-0">
                 <div className="row">
@@ -163,83 +239,6 @@ const OrderScreen = ({ match }) => {
                     )}
                   </div>
                 </div>
-              </div>
-            </div>
-
-            <div className="row order-products justify-content-between">
-              <div className="col-lg-8">
-                {order.orderItems.length === 0 ? (
-                  <Message variant="alert-info mt-5">
-                    Your order is empty
-                  </Message>
-                ) : (
-                  <>
-                    {order.orderItems.map((item, index) => (
-                      <div className="order-product row" key={index}>
-                        <div className="col-md-3 col-6">
-                          <img src={item.image} alt={item.name} />
-                        </div>
-                        <div className="col-md-5 col-6 d-flex align-items-center">
-                          <Link to={`/products/${item.product}`}>
-                            <h6>{item.name}</h6>
-                          </Link>
-                        </div>
-                        <div className="mt-3 mt-md-0 col-md-2 col-6  d-flex align-items-center flex-column justify-content-center ">
-                          <h4>QUANTITY</h4>
-                          <h6>{item.qty}</h6>
-                        </div>
-                        <div className="mt-3 mt-md-0 col-md-2 col-6 align-items-end  d-flex flex-column justify-content-center ">
-                          <h4>SUBTOTAL</h4>
-                          <h6>BHD {item.qty * item.price}</h6>
-                        </div>
-                      </div>
-                    ))}
-                  </>
-                )}
-              </div>
-              {/* total */}
-              <div className="col-lg-3 d-flex align-items-end flex-column mt-5 subtotal-order">
-                <table className="table table-bordered">
-                  <tbody>
-                    <tr>
-                      <td>
-                        <strong>Products</strong>
-                      </td>
-                      <td>BHD {order.itemsPrice}</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <strong>Shipping</strong>
-                      </td>
-                      <td>BHD {order.shippingPrice}</td>
-                    </tr>
-                    {/* <tr>
-                      <td>
-                        <strong>Tax</strong>
-                      </td>
-                      <td>BHD {order.taxPrice}</td>
-                    </tr> */}
-                    <tr>
-                      <td>
-                        <strong>Total</strong>
-                      </td>
-                      <td>BHD {order.totalPrice}</td>
-                    </tr>
-                  </tbody>
-                </table>
-                {/* {!order.isPaid && (
-                  <div className="col-12">
-                    {loadingPay && <Loading />}
-                    {!sdkReady ? (
-                      <Loading />
-                    ) : (
-                      <PayPalButton
-                        amount={order.totalPrice}
-                        onSuccess={successPaymentHandler}
-                      />
-                    )}
-                  </div>
-                )} */}
               </div>
             </div>
           </>

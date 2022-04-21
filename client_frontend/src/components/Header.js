@@ -146,7 +146,8 @@ const Header = () => {
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      Hi, {userInfo.name}
+                      {/* Hi, {userInfo.name} */}
+                      <i class="fas fa-user"></i>
                     </button>
                     <div className="dropdown-menu">
                       <Link className="dropdown-item" to="/profile">

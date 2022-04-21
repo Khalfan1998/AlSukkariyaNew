@@ -59,63 +59,7 @@ const PlaceOrderScreen = ({ history }) => {
     <>
       <Header />
       <div className="container placeOrderFooter">
-        <div className="row  order-detail">
-          <div className="col-lg-4 col-sm-4 mb-lg-4 mb-5 mb-sm-0">
-            <div className="row ">
-              <div className="col-md-4 center">
-                <div className="alert-success order-box">
-                  <i class="fas fa-user"></i>
-                </div>
-              </div>
-              <div className="col-md-8 center">
-                <h5>
-                  <strong>Customer</strong>
-                </h5>
-                <p>{userInfo.name}</p>
-                <p>{userInfo.email}</p>
-              </div>
-            </div>
-          </div>
-          {/* 2 */}
-          <div className="col-lg-4 col-sm-4 mb-lg-4 mb-5 mb-sm-0">
-            <div className="row">
-              <div className="col-md-4 center">
-                <div className="alert-success order-box">
-                  <i className="fas fa-truck-moving"></i>
-                </div>
-              </div>
-              <div className="col-md-8 center">
-                <h5>
-                  <strong>Order info</strong>
-                </h5>
-                <p>Shipping: {cart.shippingAddress.country}</p>
-                <p>Pay method: {cart.paymentMethod}</p>
-              </div>
-            </div>
-          </div>
-          {/* 3 */}
-          <div className="col-lg-4 col-sm-4 mb-lg-4 mb-5 mb-sm-0">
-            <div className="row">
-              <div className="col-md-4 center">
-                <div className="alert-success order-box">
-                  <i className="fas fa-map-marker-alt"></i>
-                </div>
-              </div>
-              <div className="col-md-8 center">
-                <h5>
-                  <strong>Deliver to</strong>
-                </h5>
-                <p>
-                  Address: {cart.shippingAddress.city},{" "}
-                  {cart.shippingAddress.address},{" "}
-                  {cart.shippingAddress.postalCode}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="row order-products justify-content-between">
+        <div className="row order-products justify-content-between mBottom">
           <div className="col-lg-8">
             {cart.cartItems.length === 0 ? (
               <Message variant="alert-info mt-5">Your cart is empty</Message>
@@ -184,6 +128,61 @@ const PlaceOrderScreen = ({ history }) => {
                 <Message variant="alert-danger">{error}</Message>
               </div>
             )}
+          </div>
+        </div>
+        <div className="row  order-detail">
+          <div className="col-lg-4 col-sm-4 mb-lg-4 mb-5 mb-sm-0">
+            <div className="row ">
+              <div className="col-md-4 center">
+                <div className="alert-success order-box">
+                  <i class="fas fa-user"></i>
+                </div>
+              </div>
+              <div className="col-md-8 center">
+                <h5>
+                  <strong>Customer</strong>
+                </h5>
+                <p>{userInfo.name}</p>
+                <p>{userInfo.email}</p>
+              </div>
+            </div>
+          </div>
+          {/* 2 */}
+          <div className="col-lg-4 col-sm-4 mb-lg-4 mb-5 mb-sm-0">
+            <div className="row">
+              <div className="col-md-4 center">
+                <div className="alert-success order-box">
+                  <i className="fas fa-truck-moving"></i>
+                </div>
+              </div>
+              <div className="col-md-8 center">
+                <h5>
+                  <strong>Order info</strong>
+                </h5>
+                <p>Shipping: {cart.shippingAddress.country}</p>
+                <p>Pay method: {cart.paymentMethod}</p>
+              </div>
+            </div>
+          </div>
+          {/* 3 */}
+          <div className="col-lg-4 col-sm-4 mb-lg-4 mb-5 mb-sm-0">
+            <div className="row">
+              <div className="col-md-4 center">
+                <div className="alert-success order-box">
+                  <i className="fas fa-map-marker-alt"></i>
+                </div>
+              </div>
+              <div className="col-md-8 center">
+                <h5>
+                  <strong>Deliver to</strong>
+                </h5>
+                <p>
+                  Address: {cart.shippingAddress.city},{" "}
+                  {cart.shippingAddress.address},{" "}
+                  {cart.shippingAddress.postalCode}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
