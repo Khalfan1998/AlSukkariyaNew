@@ -60,7 +60,9 @@ background-color: #EAE8E6;
 
 }
 
-
+.fa-user{
+  font-size:22px;
+}
 
 .whatsapp{
   width: 35px !important;
@@ -155,8 +157,8 @@ background-color: #EAE8E6;
 }
 .name-button {
   padding: 5px 15px;
-  border: 1px solid #e4e4e4;
-  background-color: white;
+  border: 0px solid #e4e4e4;
+  background-color: #EAE8E6;
   border-radius: 2px;
   margin: 0 15px;
 }
@@ -471,7 +473,7 @@ background-color: #EAE8E6;
 }
 .Login input {
   width: 100%;
-  padding: 20px 20px;
+  padding: 10px 20px;
   margin-top: 20px;
   border: 1px solid #e4e4e4;
   border-radius: 5px;
@@ -484,7 +486,7 @@ background-color: #EAE8E6;
 .Login2 button {
   width: 100%;
   margin-top: 20px;
-  padding: 20px 0;
+  padding: 16px 0;
   border: 0;
   background-color: #008080;
   border-radius: 5px;
@@ -623,8 +625,12 @@ td{
 }
 
 .mBottom{
-margin-bottom: 15%;
+margin-bottom: 8%;
 
+}
+
+.mOrderTop{
+  margin-top:4rem !important;
 }
 
 /* CART */

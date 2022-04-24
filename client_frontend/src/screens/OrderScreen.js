@@ -134,6 +134,12 @@ const OrderScreen = ({ match }) => {
                     </tr>
                   </tbody>
                 </table>
+                <p>
+                  <strong>
+                    If using BenefitPay, Please Send BHD {order.totalPrice} to
+                    IBAN : 312312311{" "}
+                  </strong>
+                </p>
                 {/* {!order.isPaid && (
                   <div className="col-12">
                     {loadingPay && <Loading />}
@@ -191,13 +197,6 @@ const OrderScreen = ({ match }) => {
                     </h5>
                     <p>Shipping: {order.shippingAddress.country}</p>
                     <p>Pay method: {order.paymentMethod}</p>
-                    <br />
-                    <p>
-                      <strong>
-                        If using BenefitPay, Please Send BHD {order.totalPrice}{" "}
-                        to IBAN : 312312311{" "}
-                      </strong>
-                    </p>
 
                     <div className="bg-info p-2 col-12">
                       <p className="text-white text-center text-sm-start">
@@ -225,13 +224,13 @@ const OrderScreen = ({ match }) => {
                       {order.shippingAddress.postalCode}
                     </p>
                     {order.isDelivered ? (
-                      <div className="bg-info p-2 col-12">
+                      <div className="bg-info p-2 col-12 mOrderTop">
                         <p className="text-white text-center text-sm-start">
                           Delivered on {moment(order.deliveredAt).calendar()}
                         </p>
                       </div>
                     ) : (
-                      <div className="bg-danger p-2 col-12">
+                      <div className="bg-danger p-2 col-12 mOrderTop">
                         <p className="text-white text-center text-sm-start">
                           Not Delivered
                         </p>
